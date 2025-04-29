@@ -1,51 +1,51 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "theme": "linden",
-  "name": "Pricecn",
-  "colors": {
-    "primary": "#000",
-    "light": "#07C983",
-    "dark": "#15803D"
-  },
-  "favicon": "/favicon.svg",
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "Usage",
-        "groups": [
-          {
-            "group": "Components",
-            "pages": [
-              "introduction/introduction",
+    "$schema": "https://mintlify.com/docs.json",
+    "theme": "linden",
+    "name": "Pricecn",
+    "colors": {
+        "primary": "#000",
+        "light": "#07C983",
+        "dark": "#15803D"
+    },
+    "favicon": "/favicon.svg",
+    "navigation": {
+        "tabs": [
+            {
+                "tab": "Usage",
+                "groups": [
+                    {
+                        "group": "Components",
+                        "pages": [
+                            "introduction/introduction"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "global": {
+            "anchors": [
+                {
+                    "anchor": "Community",
+                    "href": "https://discord.gg/STqxY92zuS",
+                    "icon": "discord"
+                },
+                {
+                    "anchor": "Autumn",
+                    "href": "https://useautumn.com",
+                    "icon": "leaf"
+                }
             ]
-          }
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Community",
-          "href": "https://discord.gg/STqxY92zuS",
-          "icon": "discord"
-        },
-        {
-          "anchor": "Autumn",
-          "href": "https://useautumn.com",
-          "icon": "leaf"
         }
-      ]
+    },
+    "logo": {
+        "light": "/logo/light.svg",
+        "dark": "/logo/dark.svg"
+    },
+    "navbar": {
+        "primary": {
+            "type": "button",
+            "label": "pricecn.com",
+            "href": "https://pricecn.com"
+        }
     }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "primary": {
-      "type": "button",
-      "label": "pricecn.com",
-      "href": "https://pricecn.com"
-    }
-  }
 }
