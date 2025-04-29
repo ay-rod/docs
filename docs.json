@@ -9,19 +9,15 @@
     },
     "favicon": "/favicon.svg",
     "navigation": {
-        "tabs": [
-            {
-                "tab": "Usage",
+
                 "groups": [
                     {
-                        "group": "Components",
+                        "group": "Introduction",
                         "pages": [
                             "introduction/introduction"
                         ]
                     }
-                ]
-            }
-        ],
+                ],
         "global": {
             "anchors": [
                 {
