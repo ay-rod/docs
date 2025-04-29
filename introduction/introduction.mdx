@@ -5,6 +5,10 @@ description: "A set of open source components that are easy to change"
 
 Welcome to Pricecn, a collection of beautiful, open source and free components to build your app’s pricing and billing experience. It’s built on top of Shadcn, the world’s most popular UI library, so you can get started easily and customize to your heart’s content.
 
+<Card title="New Card" icon="circle-dollar" horizontal={false} href="https://pricecn.com" cta="See the components and edit the schema">
+  
+</Card>
+
 ## Styles
 
 The `pricing-table` component comes with 3 styles.
@@ -13,25 +17,13 @@ The `pricing-table` component comes with 3 styles.
 - `classic`: inspired by modern minimalism. For AI and SaaS products.
 - `dev`: sharp, retro vibes. For a neo-developer aesthetic.
 
-<Tabs>
-  <Tab title="Clean">
-    ![image.png](/image.png)
-
-    ## Installation
-  </Tab>
-  <Tab title="Classic">
-    
-  </Tab>
-  <Tab title="Dev">
-    ![image.png](/image.png)
-  </Tab>
-</Tabs>
+## Install
 
 ```bash
 npx shadcn@latest add https://pricecn.com/clean/pricing-table.json
 ```
 
-This will download the pricing-table component in your components directory.
+This will download the pricing-table component in your components directory. You can swap `clean` for any of the styles above.
 
 ## Define your product schema
 
@@ -61,10 +53,50 @@ type Product = {
 ```
 
 <Note>
-  LLMs are good at auto generating this price schema from a screenshot\!
+  LLMs are good at auto generating this schema from a screenshot\!
 </Note>
-
 
 ## Usage
 
+An example usage of `<PricingTable />` will be downloaded as `components/pricing/example.tsx`. This file demonstrates how to define your products and pass them into the `PricingTable` component.
+
+```javascript
+import { PricingTable, PricingCard, Product } from "./pricing-table";
+
+export const products: Product[] = [
+  {
+    id: "hobby",
+    name: "Hobby",
+    description: "For personal projects and small-scale applications.",
+    price: { primaryText: "Free", secondaryText: "up to 3 users" },
+    buttonText: "Start deploying",
+    items: [
+      { primaryText: "Deploy full-stack apps in minutes" },
+      { primaryText: "Fully-managed datastores" },
+      // ...more features
+    ],
+  },
+  // ...more products
+];
+
+export const PricingTableExample = () => (
+  <PricingTable products={products} showFeatures={true}>
+    <PricingCard productId="hobby" />
+    <PricingCard productId="professional" />
+    <PricingCard productId="enterprise" buttonProps={{
+onClick: () => {
+console.log("Button Clicked");
+}
+}}/>
+  </PricingTable>
+);
+```
+
+`<PricingCard>` can also take in `buttonProps` , allowing you to define an `onClick()` function.
+
 ## Coming soon
+
+- Paywalls
+- Billing pages
+- Feature tables
+- Usage meters
