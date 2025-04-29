@@ -3,7 +3,7 @@
     "theme": "linden",
     "name": "Pricecn",
     "colors": {
-        "primary": "#000",
+        "primary": "#000000",
         "light": "#07C983",
         "dark": "#15803D"
     },
