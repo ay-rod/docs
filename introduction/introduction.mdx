@@ -2,3 +2,69 @@
 title: "Pricecn components"
 description: "A set of open source components that are easy to change"
 ---
+
+Welcome to Pricecn, a collection of beautiful, open source and free components to build your app’s pricing and billing experience. It’s built on top of Shadcn, the world’s most popular UI library, so you can get started easily and customize to your heart’s content.
+
+## Styles
+
+The `pricing-table` component comes with 3 styles.
+
+- `clean`: the simplest variant, and the easiest to customize.
+- `classic`: inspired by modern minimalism. For AI and SaaS products.
+- `dev`: sharp, retro vibes. For a neo-developer aesthetic.
+
+<Tabs>
+  <Tab title="Clean">
+    ![image.png](/image.png)
+
+    ## Installation
+  </Tab>
+  <Tab title="Classic">
+    
+  </Tab>
+  <Tab title="Dev">
+    ![image.png](/image.png)
+  </Tab>
+</Tabs>
+
+```bash
+npx shadcn@latest add https://pricecn.com/clean/pricing-table.json
+```
+
+This will download the pricing-table component in your components directory.
+
+## Define your product schema
+
+Pricing components can be involved and tricky to manage on the frontend, especially when pricing changes happen. `pricing-table` can automatically generate based on a simple product schema you define.
+
+```javascript
+type Product = {
+  id: string; //an ID you'll pass into a <PricingCard> to render it
+  name: string; //the name of the product (eg, Pro)
+  description?: string; //product description
+  recommendedText?: string; //for emphasized products (eg, "Best Value")
+  price: {
+    primaryText: string; //product main price
+    secondaryText?: string; //pricing details (eg, per user, per month)
+  };
+  priceAnnual?: {
+    primaryText: string; //annual price variant
+    secondaryText?: string; //pricing details for the annual variant
+  };
+  buttonText: string; //text for the <PricingCard> button
+  everythingFrom?: string; //renders a "Everything from X, and" string
+  items: {
+    primaryText: string; //features available, (eg, 5 seats included)
+    secondaryText?: string; //extra text, usually for pricing (eg, then $10USD per seat)
+  }[]; //items is an array
+};
+```
+
+<Note>
+  LLMs are good at auto generating this price schema from a screenshot\!
+</Note>
+
+
+## Usage
+
+## Coming soon
