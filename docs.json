@@ -1,10 +1,10 @@
 {
     "$schema": "https://mintlify.com/docs.json",
     "theme": "linden",
-    "name": "Pricecn",
+    "name": "pricecn",
     "colors": {
         "primary": "#000000",
-        "light": "#07C983",
+        "light": "#fafafa",
         "dark": "#15803D"
     },
     "favicon": "/favicon.svg",
