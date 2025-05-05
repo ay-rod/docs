@@ -1,0 +1,76 @@
+---
+title: "Pricing Dialog"
+description: "A dialog component that can be used to display price information, or act as a paywall"
+---
+
+This is a styled shadcn dialog with some additional components:
+
+- `<PriceItem>`: can be used to list out pricing information before a user purchases a product
+- `<QuantityInput>`: a quantity selector that can be used to input an amount (eg, 9 x 250 credits)
+- `<TotalPrice>`: displays a final total on the dialog
+- `<Information>`: a quick summary of the information being displayed on the dialog
+
+## Install
+
+<CodeGroup>
+```bash npm
+npx shadcn@latest add https://pricecn.com/clean/pricing-dialog.json
+```
+
+```bash pnpm
+pnpm dlx shadcn@latest add https://pricecn.com/clean/pricing-dialog.json
+```
+
+```bash yarn
+yarn dlx shadcn@latest add https://pricecn.com/clean/pricing-dialog.json
+```
+
+```bash bun
+bunx --bun shadcn@latest add https://pricecn.com/clean/pricing-dialog.json
+```
+
+</CodeGroup>
+
+This will download the pricing-dialog component in your `/components` directory. You can swap `clean` for `classic` or `dev` if you want to use a different style. View them all at [pricecn.com](https://pricecn.com).
+
+## Usage
+
+```jsx [expandable]
+<PricingDialog open={isOpen} setOpen={setIsOpen}>
+  <PricingDialogTitle className="text-xl font-bold px-6">
+    Upgrade to Pro
+  </PricingDialogTitle>
+  <Information>
+    By clicking confirm, you will subscribe to Pro and the following amount will
+    be charged:
+  </Information>
+  <PriceItem>
+    <span>Subscription</span>
+    <span>$10.00 per month</span>
+  </PriceItem>
+  <PriceItem>
+    <span>Credits</span>
+    <span>2000 included per month, then $0.001 each</span>
+  </PriceItem>
+  <PriceItem>
+    <span>Seats</span>
+    <QuantityInput
+      value={quantity}
+      onChange={(e) => {
+        setQuantity(Number(e.target.value));
+      }}
+    >
+      <span className="truncate">x $20 each</span>
+    </QuantityInput>
+  </PriceItem>
+  <PricingDialogFooter>
+    <TotalPrice>
+      <span>Due Today</span>
+      <span>${10 + quantity * 20}</span>
+    </TotalPrice>
+    <PricingDialogButton>Confirm</PricingDialogButton>
+  </PricingDialogFooter>
+</PricingDialog>
+```
+
+<img src="/images/pricing-dialog.png" alt="Pricing Dialog" />

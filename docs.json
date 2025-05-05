@@ -1,43 +1,43 @@
 {
-    "$schema": "https://mintlify.com/docs.json",
-    "theme": "linden",
-    "name": "pricecn",
-    "colors": {
-        "primary": "#000000",
-        "light": "#fafafa",
-        "dark": "#15803D"
-    },
-    "favicon": "/favicon.svg",
-    "navigation": {
-
-                "groups": [
-                    {
-                        "group": "Introduction",
-                        "pages": [
-                            "introduction/introduction"
-                        ]
-                    }
-                ],
-        "global": {
-            "anchors": [
-                {
-                    "anchor": "Community",
-                    "href": "https://discord.gg/STqxY92zuS",
-                    "icon": "discord"
-                },
-                {
-                    "anchor": "Autumn",
-                    "href": "https://useautumn.com",
-                    "icon": "leaf"
-                }
-            ]
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "linden",
+  "name": "pricecn",
+  "colors": {
+    "primary": "#000000",
+    "light": "#fafafa",
+    "dark": "#15803D"
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": " ",
+        "pages": [
+          "introduction/introduction",
+          "components/pricing-table",
+          "components/pricing-dialog"
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Community",
+          "href": "https://discord.gg/STqxY92zuS",
+          "icon": "discord"
+        },
+        {
+          "anchor": "Autumn",
+          "href": "https://useautumn.com",
+          "icon": "leaf"
         }
-    },
-    "navbar": {
-        "primary": {
-            "type": "button",
-            "label": "pricecn.com",
-            "href": "https://pricecn.com"
-        }
+      ]
     }
+  },
+  "navbar": {
+    "primary": {
+      "type": "button",
+      "label": "pricecn.com",
+      "href": "https://pricecn.com"
+    }
+  }
 }
